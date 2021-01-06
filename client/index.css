@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Special+Elite&display=swap');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Special Elite', cursive; */
+
+h1 {
+    font-family: 'Special Elite', cursive;
+}
+
+::placeholder {
+    font-family: "Montserrat", sans-serif;
+    
+  }
+
+#title::placeholder {
+    font-size: 1.5rem;
+  }
+
+  input {
+      display: block;
+      padding: 10px;
+      margin: 20px;
+      border-style: hidden;
+      cursor: pointer;
+  }
+
+  textarea {
+      border-style: hidden;
+      margin-left: 30px;
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+  }
+
+  #submit {
+    display: block;
+    margin-top: 20px;
+    font: 800 1.2rem Arial;
+    padding: 10px 30px;
+    background: white;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    border-radius:  100px 100px ;
+    text-transform: uppercase;
+  }
+
+  #submit:hover {
+      background-color: rgba(137, 136, 138, 0.2);
+      cursor: pointer;
+      
+  }
