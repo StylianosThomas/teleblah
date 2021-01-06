@@ -12,6 +12,8 @@ class Blog {
     static create(title, author, content) {
         return new Promise (async (resolve, reject) => {
             try {
+                console.log("works up to here")
+                console.log(title, author, content)
                 let blogData = await db.run(SQL`INSERT INTO blogs (title, author, content) VALUES (${title}, ${author}, ${content}) RETURNING *;`);
                 let newBlog = new Blog(blogData.rows[0]);
                 resolve (newBlog);
