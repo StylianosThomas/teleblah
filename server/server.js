@@ -8,7 +8,7 @@ server.use(express.json());
 const blogRoutes = require('./controllers/blogs')
 server.use('/blog', blogRoutes)
 
-const { init } = require('./db/config')
+// const { init } = require('./db/config')
 
 const port = process.env.PORT || 3000;
 

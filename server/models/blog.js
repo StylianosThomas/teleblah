@@ -1,19 +1,17 @@
-const { db } = require ('../db/config')
+const db = require ('../db/config')
 const SQL = require("sql-template-strings");
 
 class Blog {
     constructor(data){
-        this.id = data.id
-        this.title = data.title
-        this.author = data.author
-        this.content = data.content
+        this.id = data.id;
+        this.title = data.title;
+        this.author = data.author;
+        this.content = data.content;
     }
 
     static create(title, author, content) {
         return new Promise (async (resolve, reject) => {
             try {
-                console.log("works up to here")
-                console.log(title, author, content)
                 let blogData = await db.run(SQL`INSERT INTO blogs (title, author, content) VALUES (${title}, ${author}, ${content}) RETURNING *;`);
                 let newBlog = new Blog(blogData.rows[0]);
                 resolve (newBlog);

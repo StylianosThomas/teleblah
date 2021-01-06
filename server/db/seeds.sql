@@ -2,9 +2,9 @@ DROP TABLE IF EXISTS blogs;
 
 CREATE TABLE blogs (
     id serial PRIMARY KEY,
-    title varchar(40) NOT NULL,
-    author varchar(20) NOT NULL,
-    content varchar NOT NULL
+    title VARCHAR(40) NOT NULL,
+    author VARCHAR(20) NOT NULL,
+    content VARCHAR NOT NULL
 );
 
 INSERT INTO blogs (title, author, content) 
